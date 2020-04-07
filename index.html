@@ -19,7 +19,10 @@
 		  rel="apple-touch-icon">
 	<!-- Font Awesome-->
 	<script src="https://kit.fontawesome.com/2dcdeff0f5.js"
-			crossorigin="anonymous"></script>
+	 crossorigin="anonymous"></script>
+	<script src="assets/js/smtp.js"></script>
+
+	<script src="assets/js/form.js"></script>
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i&subset=cyrillic"
@@ -804,7 +807,7 @@
 					</div>
 
 					<div class="col-lg-5 col-md-8">
-						<form action="forms/contact.php"
+						<form id="sendMail" action="return sendMail()"
 							  method="post"
 							  role="form"
 							  class="php-email-form">
@@ -812,7 +815,7 @@
 								<input type="text"
 									   name="name"
 									   class="form-control"
-									   id="name"
+									   id="txtName"
 									   placeholder="Your Name"
 									   data-rule="minlen:4"
 									   data-msg="Please enter at least 4 chars" />
@@ -822,7 +825,7 @@
 								<input type="email"
 									   class="form-control"
 									   name="email"
-									   id="email"
+									   id="txtFrom"
 									   placeholder="Your Email"
 									   data-rule="email"
 									   data-msg="Please enter a valid email" />
@@ -832,7 +835,7 @@
 								<input type="text"
 									   class="form-control"
 									   name="subject"
-									   id="subject"
+									   id="txtSubject"
 									   placeholder="Subject"
 									   data-rule="minlen:4"
 									   data-msg="Please enter at least 8 chars of subject" />
@@ -842,6 +845,7 @@
 								<textarea class="form-control"
 										  name="message"
 										  rows="5"
+	    									  id="txtContent"
 										  data-rule="required"
 										  data-msg="Please write something for us"
 										  placeholder="Message"></textarea>
