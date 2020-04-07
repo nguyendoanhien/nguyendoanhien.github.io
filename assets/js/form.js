@@ -19,7 +19,7 @@ function startTimer(duration, display) {
 }
 
 $('#sendMail').submit(function (e) {
-
+	$("#sendMail").find('.loading').slideDown();
 	e.preventDefault();
 	if (!$("#sendMail").valid())
 	{
