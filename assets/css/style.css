@@ -728,6 +728,9 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  height: 200px;
+  /* flex: auto; */
+  display: flex;
 }
 
 .portfolio .portfolio-wrap::before {
